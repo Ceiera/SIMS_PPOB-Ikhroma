@@ -1,0 +1,33 @@
+.padding-global {
+  padding-left: 10rem;
+  padding-right: 10rem;
+}
+
+.saldo {
+  width: 60%;
+}
+.padding-promo {
+  padding-left: 10rem;
+}
+
+.carousel {
+}
+
+.carousel-cell {
+  margin-right: 20px;
+  border-radius: 5px;
+  counter-increment: gallery-cell;
+}
+
+
+/* cell number */
+.carousel-cell:before {
+    display: block;
+    text-align: center;
+    content: counter(carousel-cell);
+    color: white;
+  }
+
+  a{
+    text-decoration: none;
+  }

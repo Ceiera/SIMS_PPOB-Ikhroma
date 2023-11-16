@@ -1,0 +1,17 @@
+.register-form{
+    width: 45%;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-right: 6rem;
+    padding-left: 6rem;
+}
+
+.register-image{
+    width: 55%
+}
+
+
+.register-image > img{
+    height: 100vh;
+    width: 100vh;
+}
