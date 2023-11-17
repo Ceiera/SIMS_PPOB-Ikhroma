@@ -5,7 +5,7 @@
                 <img src="<?php if ($profile->profile_image!="https://minio.nutech-integrasi.app/take-home-test/null") {
                     echo $profile->profile_image;
                 }else{
-                    echo base_url('assets/Profile Photo.png');
+                    echo base_url('public/assets/Profile Photo.png');
                 } ?>" alt="" />
             </div>
             <div>
@@ -17,7 +17,7 @@
             <p class="text-white z-2">Saldo anda</p>
             <h3 class="text-white z-2">Rp <?= $balance->balance ?></h3>
             <p class="text-white mb-0 z-2 align-items-stretch">Lihat saldo</p>
-            <img src="<?= base_url('assets') ?>/Background Saldo.png" class="position-absolute z-1 start-0 top-0" width="" alt="">
+            <img src="<?= base_url('public/assets') ?>/Background Saldo.png" class="position-absolute z-1 start-0 top-0" width="" alt="">
         </div>
     </div>
 </section>

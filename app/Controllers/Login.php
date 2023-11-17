@@ -13,7 +13,7 @@ class Login extends BaseController
         ];
         $this->clientCurl = \Config\Services::curlrequest($this->options);
     }
-    public function index(): string
+    public function index()
     {
         return view('login');
     }
@@ -48,7 +48,7 @@ class Login extends BaseController
             return redirect()->to('login');
         } else {
             try {
-                $response = $this->clientCurl->request('POST', getenv('NUTECHAPI') . '/login', [
+                $response = $this->clientCurl->request('POST', $_ENV['NUTECHAPI'] . '/login', [
                     'headers' => [
                         'Accept' => 'application/json',
                         'Content-Type' => 'application/json'

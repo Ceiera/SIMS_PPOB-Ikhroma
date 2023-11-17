@@ -14,7 +14,7 @@
             font-family: sans-serif;
         }
     </style>
-    <link rel="stylesheet" href="<?= base_url('css') ?>/register.css" />
+    <link rel="stylesheet" href="<?= base_url('public/css') ?>/register.css" />
 </head>
 
 <body>
@@ -23,7 +23,7 @@
             <div class="d-flex flex-column">
                 <div class="form-header d-flex flex-column row-gap-3">
                     <h4 class="fw-bolder text-center">
-                        <span><img src="<?= base_url('assets') ?>/Logo.png" alt="" /></span>
+                        <span><img src="<?= base_url('public/assets') ?>/Logo.png" alt="" /></span>
                         SIMS PPOB
                     </h4>
                     <h4 class="fw-bolder text-center mb-4">
@@ -69,7 +69,7 @@
 
         </div>
         <div class="register-image">
-            <img src="<?= base_url('assets') ?>/Illustrasi Login.png" alt="" />
+            <img src="<?= base_url('public/assets') ?>/Illustrasi Login.png" alt="" />
         </div>
     </div>
     <?php

@@ -15,8 +15,12 @@ class Register extends BaseController
         $this->clientCurl = \Config\Services::curlrequest($this->options);
         $this->session = session();
     }
-    public function index(): string
+    public function index()
     {
+        $token = (session()->get('token'));
+        if ($token != null) {
+            return redirect()->to('dashboard');
+        }
         return view('register');
     }
 
@@ -73,7 +77,7 @@ class Register extends BaseController
         }
         else{
             try {
-                $response = $this->clientCurl->request('POST', getenv('NUTECHAPI') . '/registration',[
+                $response = $this->clientCurl->request('POST', $_ENV['NUTECHAPI'] . '/registration',[
                     'headers' => [
                         'Accept' => 'application/json',
                         'Content-Type' => 'application/json'

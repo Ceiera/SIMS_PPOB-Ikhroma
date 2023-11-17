@@ -14,7 +14,7 @@
             font-family: sans-serif;
         }
     </style>
-    <link rel="stylesheet" href="<?= base_url('css') ?>/dashboard.css" />
+    <link rel="stylesheet" href="<?= base_url('public/css') ?>/dashboard.css" />
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" />
 </head>
 
@@ -22,7 +22,7 @@
     <?= $this->include('statis/navbar') ?>
     <div class="mt-3 d-flex flex-column padding-global" style="padding-left: 20rem; padding-right: 20rem;">
         <div class="profile-img d-flex flex-column align-items-center row-gap-2">
-            <img src="<?= base_url('assets/Profile Photo.png') ?>" width="100px" alt="">
+            <img src="<?= base_url('public/assets/Profile Photo.png') ?>" width="100px" alt="">
             <h3 class="fw-bold"><?= $profile->first_name ?> <?= $profile->last_name ?></h3>
         </div>
         <div class="d-flex flex-column align-item-center row-gap-2">

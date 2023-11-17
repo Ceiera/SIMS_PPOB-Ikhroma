@@ -1,6 +1,6 @@
 <header>
     <nav class="d-flex navbar navbar-expand-lg padding-global py-2 mb-4 border-bottom">
-      <a class="d-flex align-items-center navbar-brand fw-bold" href="<?= base_url('dashboard')?>"><span class="me-2"><img src="<?= base_url('assets') ?>/Logo.png" alt="" /></span><span>SIMS PPOB</span></a>
+      <a class="d-flex align-items-center navbar-brand fw-bold" href="<?= base_url('dashboard')?>"><span class="me-2"><img src="<?= base_url('public/assets') ?>/Logo.png" alt="" /></span><span>SIMS PPOB</span></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>

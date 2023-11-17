@@ -23,7 +23,7 @@ class Service extends BaseController
             return redirect()->to('dashboard');
         }
         //get profile
-        $profile = $this->clientCurl->request('GET', getenv('NUTECHAPI') . '/profile', [
+        $profile = $this->clientCurl->request('GET', $_ENV['NUTECHAPI'] . '/profile', [
             'headers' => [
                 'Authorization' => 'Bearer ' . $token,
                 'Accept' => 'application/json',
@@ -32,7 +32,7 @@ class Service extends BaseController
         ])->getBody();
 
         //get balance
-        $balance = $this->clientCurl->request('GET', getenv('NUTECHAPI') . '/balance', [
+        $balance = $this->clientCurl->request('GET', $_ENV['NUTECHAPI'] . '/balance', [
             'headers' => [
                 'Authorization' => 'Bearer ' . session()->get('token'),
                 'Accept' => 'application/json',
@@ -41,7 +41,7 @@ class Service extends BaseController
         ])->getBody();
 
         //ambil data service
-        $services = $this->clientCurl->request('GET', getenv('NUTECHAPI') . '/services', [
+        $services = $this->clientCurl->request('GET', $_ENV['NUTECHAPI'] . '/services', [
             'headers' => [
                 'Authorization' => 'Bearer ' . session()->get('token'),
                 'Accept' => 'application/json',
@@ -87,7 +87,7 @@ class Service extends BaseController
             if ($param == null) {
                 return redirect()->to('dashboard');
             }
-            $transaction =  $this->clientCurl->request('POST', getenv('NUTECHAPI') . '/transaction', [
+            $transaction =  $this->clientCurl->request('POST', $_ENV['NUTECHAPI'] . '/transaction', [
                 'headers' => [
                     'Authorization' => 'Bearer ' . $token,
                     'Accept' => 'application/json',

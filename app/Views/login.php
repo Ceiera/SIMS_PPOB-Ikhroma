@@ -13,7 +13,7 @@
       font-family: sans-serif;
     }
   </style>
-  <link rel="stylesheet" href="<?= base_url('css') ?>/login.css" />
+  <link rel="stylesheet" href="<?= base_url('public/css') ?>/login.css" />
 </head>
 
 <body>
@@ -22,7 +22,7 @@
       <div class="d-flex flex-column">
         <div class="form-header d-flex flex-column row-gap-3">
           <h3 class="fw-light text-center">
-            <span><img src="<?= base_url('assets') ?>/Logo.png" alt="" /></span>
+            <span><img src="<?= base_url('public/assets') ?>/Logo.png" alt="" /></span>
             SIMS PPOB
           </h3>
           <h3 class="fw-bolder text-center mb-5">
@@ -54,7 +54,7 @@
       </div>
     </div>
     <div class="login-image">
-      <img src="<?= base_url('assets') ?>/Illustrasi Login.png" alt="" />
+      <img src="<?= base_url('public/assets') ?>/Illustrasi Login.png" alt="" />
     </div>
   </div>
   <?php

@@ -13,14 +13,14 @@ class Dashboard extends BaseController
         ];
         $this->clientCurl = \Config\Services::curlrequest($this->options);
     }
-    public function index(): string
+    public function index()
     {
         $token = (session()->get('token'));
         if ($token == null) {
             return redirect()->to('login');
         }
         //get profile
-        $profile = $this->clientCurl->request('GET', getenv('NUTECHAPI') . '/profile', [
+        $profile = $this->clientCurl->request('GET', $_ENV['NUTECHAPI'] . '/profile', [
             'headers' => [
                 'Authorization' => 'Bearer ' . $token,
                 'Accept' => 'application/json',
@@ -29,7 +29,7 @@ class Dashboard extends BaseController
         ])->getBody();
 
         //get balance
-        $balance = $this->clientCurl->request('GET', getenv('NUTECHAPI') . '/balance', [
+        $balance = $this->clientCurl->request('GET', $_ENV['NUTECHAPI'] . '/balance', [
             'headers' => [
                 'Authorization' => 'Bearer ' . session()->get('token'),
                 'Accept' => 'application/json',
@@ -38,7 +38,7 @@ class Dashboard extends BaseController
         ])->getBody();
 
         //get services
-        $services = $this->clientCurl->request('GET', getenv('NUTECHAPI') . '/services', [
+        $services = $this->clientCurl->request('GET', $_ENV['NUTECHAPI'] . '/services', [
             'headers' => [
                 'Authorization' => 'Bearer ' . session()->get('token'),
                 'Accept' => 'application/json',
@@ -47,7 +47,7 @@ class Dashboard extends BaseController
         ])->getBody();
         
         //get banner
-        $banners = $this->clientCurl->request('GET', getenv('NUTECHAPI') . '/banner', [
+        $banners = $this->clientCurl->request('GET', $_ENV['NUTECHAPI'] . '/banner', [
             'headers' => [
                 'Authorization' => 'Bearer ' . session()->get('token'),
                 'Accept' => 'application/json',

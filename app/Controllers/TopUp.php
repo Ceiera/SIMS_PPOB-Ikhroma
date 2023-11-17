@@ -20,7 +20,7 @@ class TopUp extends BaseController
             return redirect()->to('login');
         }
         //get profile
-        $profile = $this->clientCurl->request('GET', getenv('NUTECHAPI') . '/profile', [
+        $profile = $this->clientCurl->request('GET', $_ENV['NUTECHAPI'] . '/profile', [
             'headers' => [
                 'Authorization' => 'Bearer ' . $token,
                 'Accept' => 'application/json',
@@ -29,7 +29,7 @@ class TopUp extends BaseController
         ])->getBody();
 
         //get balance
-        $balance = $this->clientCurl->request('GET', getenv('NUTECHAPI') . '/balance', [
+        $balance = $this->clientCurl->request('GET', $_ENV['NUTECHAPI'] . '/balance', [
             'headers' => [
                 'Authorization' => 'Bearer ' . session()->get('token'),
                 'Accept' => 'application/json',
@@ -57,7 +57,7 @@ class TopUp extends BaseController
             if ($nilai <= 10000 && $nilai >= 1000000) {
                 return redirect()->to('/topup')->with('alert', 'nominal top up tidak valid');
             }
-            $topup =  $this->clientCurl->request('POST', getenv('NUTECHAPI') . '/topup', [
+            $topup =  $this->clientCurl->request('POST', $_ENV['NUTECHAPI'] . '/topup', [
                 'headers' => [
                     'Authorization' => 'Bearer ' . $token,
                     'Accept' => 'application/json',

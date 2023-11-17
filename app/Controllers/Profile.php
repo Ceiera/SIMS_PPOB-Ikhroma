@@ -20,7 +20,7 @@ class Profile extends BaseController
             return redirect()->to('login');
         }
         //get profile
-        $profile = $this->clientCurl->request('GET', getenv('NUTECHAPI') . '/profile', [
+        $profile = $this->clientCurl->request('GET', $_ENV['NUTECHAPI'] . '/profile', [
             'headers' => [
                 'Authorization' => 'Bearer ' . $token,
                 'Accept' => 'application/json',
@@ -45,7 +45,7 @@ class Profile extends BaseController
             return redirect()->to('login');
         }
         //get profile
-        $profile = $this->clientCurl->request('GET', getenv('NUTECHAPI') . '/profile', [
+        $profile = $this->clientCurl->request('GET', $_ENV['NUTECHAPI'] . '/profile', [
             'headers' => [
                 'Authorization' => 'Bearer ' . $token,
                 'Accept' => 'application/json',
@@ -98,7 +98,7 @@ class Profile extends BaseController
                 session()->setFlashdata(['alert' => $session_error]);
                 return redirect()->to('account');
             } else {
-                $profile =  $this->clientCurl->request('PUT', getenv('NUTECHAPI') . '/profile/update', [
+                $profile =  $this->clientCurl->request('PUT', $_ENV['NUTECHAPI'] . '/profile/update', [
                     'headers' => [
                         'Authorization' => 'Bearer ' . $token,
                         'Accept' => 'application/json',

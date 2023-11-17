@@ -14,7 +14,7 @@
       font-family: sans-serif;
     }
   </style>
-  <link rel="stylesheet" href="<?= base_url('css') ?>/dashboard.css" />
+  <link rel="stylesheet" href="<?= base_url('public/css') ?>/dashboard.css" />
   <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" />
 </head>
 
